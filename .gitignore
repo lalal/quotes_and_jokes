@@ -131,3 +131,6 @@ dmypy.json
 
 # Virtualenv
 qj/
+
+# Env
+.env
