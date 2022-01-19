@@ -20,7 +20,7 @@ from of_the_day import views as ofd_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ofd_views.index, name='index'),
+    path('', views.index, name='index'),
     path('of_the_day/', include('of_the_day.urls'))
 ]
 

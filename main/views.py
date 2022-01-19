@@ -4,7 +4,7 @@ import requests
 from django.shortcuts import redirect
 
 def index(request):
-    return HttpResponse("Root url")
+    return render(request, 'main/home.html')
 
 def redirct_view(request):
     response = redirect('/of_the_day/')

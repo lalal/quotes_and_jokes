@@ -134,3 +134,6 @@ qj/
 
 # Env
 .env
+
+# IntelliJ
+.idea
