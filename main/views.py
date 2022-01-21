@@ -9,3 +9,4 @@ def index(request):
 def redirct_view(request):
     response = redirect('/of_the_day/')
     return response
+

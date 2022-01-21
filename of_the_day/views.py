@@ -4,7 +4,9 @@ import requests
 from api_keys import api_keys
 
 def index(request):
-    return HttpResponse("Joke of the Day")
+    response = requests.request("GET", api_keys.dad_jokes_url, headers=api_keys.dad_jokes_headers)
+    print(response)
+    return render(request, "joke_of_the_day.html", {'response': response})
 
 def quote_of_the_day(request):
     print(api_keys.dad_jokes_headers)

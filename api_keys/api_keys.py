@@ -8,6 +8,7 @@ dad_jokes_headers = {
     'x-rapidapi-key': config("RAPID_API_KEY")
     }
 
+
 motivation_quotes_url = "https://motivational-quotes1.p.rapidapi.com/motivation"
 
 motivational_quotes_headers = {

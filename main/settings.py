@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap5'
+    #'bootstrap5'
 ]
 
 MIDDLEWARE = [
@@ -56,11 +56,12 @@ ROOT_URLCONF = 'main.urls'
 
 CURR_PATH = os.path.realpath('.')
 CURR_PATH_MAIN = CURR_PATH + '/main/templates/'
+CURR_PATH_OTD = CURR_PATH + '/of_the_day/templates'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [CURR_PATH_MAIN],
+        'DIRS': [CURR_PATH, CURR_PATH_MAIN, CURR_PATH_OTD],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'), )
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
